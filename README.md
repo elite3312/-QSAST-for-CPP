@@ -9,9 +9,7 @@ Running codeQL against CWE.
   - ~~still need the codeQL cli~~
   - ~~ref <https://docs.github.com/en/code-security/codeql-cli/getting-started-with-the-codeql-cli/preparing-your-code-for-codeql-analysis>~~
 
-## overview
-
-### objective
+## objective
 
 - use Q-SAST tools, in particular CodeQL, to detect vulnerabilities in programs.
   - improve the official query database for C/C++: <https://codeql.github.com/docs/codeql-language-guides/basic-query-for-cpp-code/>
@@ -19,7 +17,13 @@ Running codeQL against CWE.
   - If CodeQL fails to identify a known vulnerability, please write a new query for it.
 - to evaluate, we select five CWE cases from <https://github.com/arichardson/juliet-test-suite-c>
 
-## installing codeQL
+## buuild commands
+
+- building codeql db for cwe 196 and 122
+  - codeql database create ~/cybersecurity2024/cwe_vulnerabilities --language=c-cpp --overwrite --command "python3 juliet.py 196 122 -g -m -r -k"
+## tutorial
+
+### installing codeQL
 
 these steps were tested on Linux only
 
@@ -42,7 +46,7 @@ these steps were tested on Linux only
       - Otherwise, the extension will download a verions of the codeql cli for you
         - the extension-managed CodeQL CLI is not accessible from the terminal. If you intend to use the CLI outside of the extension (for example to create databases), we recommend that you install your own copy of the CodeQL CLI.
 
-### Setting up a custom CodeQL workspace(optional)
+#### Setting up a custom CodeQL workspace(optional)
 
 do this if you don't want to work inside the vscode starter workspace(possibly for version control)
 
@@ -50,7 +54,7 @@ do this if you don't want to work inside the vscode starter workspace(possibly f
 - setup a seperate workspace for your project, and open it with vscode
 - add the cloned codeql repo folder to the current workspace
 
-## creating your own codeQL database for analysis
+### creating your own codeQL database for analysis
 
 here we target a repo including cwe_vulnerabilitiess
 
@@ -81,7 +85,7 @@ here we target a repo including cwe_vulnerabilitiess
     Successfully created database at /home/perry/cybersecurity2024/cwe_vulnerabilities.
     ```
 
-## running your first query against the customized database
+### running your first query against the customized database
 
 - specify the path to the database in the codeQL extension
   - select **choose database from folder** in the LHS panel
