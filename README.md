@@ -37,9 +37,10 @@ these steps were tested on Linux only
 
     - install codeQL vscode extension
       - If you have downloaded the codeql cli.
-        - add /home/perry/codeql/codeql to the extension's executable path
+        - copy the path /home/perry/codeql/codeql to the extension's codeql cli path
+          - ![Alt text](assets/codeql_cli_path.png)
       - Otherwise, the extension will download a verions of the codeql cli for you
-        - the extension-managed CodeQL CLI is not accessible from the terminal. If you intend to use the CLI outside of the extension (for example to create databases), we recommend that you install your own copy of the CodeQL CLI."
+        - the extension-managed CodeQL CLI is not accessible from the terminal. If you intend to use the CLI outside of the extension (for example to create databases), we recommend that you install your own copy of the CodeQL CLI.
 
 ### Setting up a custom CodeQL workspace(optional)
 
