@@ -17,7 +17,7 @@ Running codeQL against CWE.
   - If CodeQL fails to identify a known vulnerability, please write a new query for it.
 - to evaluate, we select five CWE cases from <https://github.com/arichardson/juliet-test-suite-c>
 
-## buuild commands
+## build commands
 
 - building codeql db for cwe 196 and 122
   - codeql database create ~/cybersecurity2024/cwe_vulnerabilities --language=c-cpp --overwrite --command "python3 juliet.py 196 122 -g -m -r -k"
@@ -72,6 +72,7 @@ here we target a repo including cwe_vulnerabilitiess
   ```
 
 - check out <https://github.com/arichardson/juliet-test-suite-c.git>
+  - we have heard that in some cases, one must edit **juliet-run.sh** as the way it is in this commit <https://github.com/arichardson/juliet-test-suite-c/commit/f4fe457c1c42f7d06bbcadf9deb0b0b6ae15b4de> in order to build successfully.
   - inside the repo, do the following
 
     ```ps
