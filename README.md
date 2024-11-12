@@ -21,6 +21,7 @@ Running codeQL against CWE.
 
 - building codeql db for cwe 196 and 122
   - codeql database create ~/cybersecurity2024/cwe_vulnerabilities --language=c-cpp --overwrite --command "python3 juliet.py 196 122 -g -m -r -k"
+
 ## tutorial
 
 ### installing codeQL
@@ -92,7 +93,7 @@ here we target a repo including cwe_vulnerabilitiess
   - select **choose database from folder** in the LHS panel
 - paste the following code into **codeql-custom-queries-cpp/example.ql**, this should always return something
 
-  ```ql
+  ```codeql
     /**
    * @name single statement block
    * @kind problem

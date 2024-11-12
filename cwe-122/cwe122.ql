@@ -31,4 +31,6 @@ class HeapBufferOverflow extends TaintTracking::Configuration {
 
 from HeapBufferOverflow cfg, DataFlow::PathNode source, DataFlow::PathNode sink
 where cfg.hasFlowPath(source, sink)
-select sink.getNode(), source, sink, "Potential heap-based buffer overflow detected."
+//select sink.getNode(), source, sink, "Potential heap-based buffer overflow detected."
+
+select sink, "Potential heap-based buffer overflow detected."
