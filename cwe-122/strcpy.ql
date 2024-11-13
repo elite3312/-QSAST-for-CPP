@@ -23,7 +23,7 @@ class HeapBufferOverflow extends TaintTracking::Configuration {
   // The sink is identified as the first argument of the strcpy call.
   override predicate isSink(DataFlow::Node sink) {
     exists(FunctionCall call |
-      (call.getTarget().hasName("strcpy") or call.getTarget().hasName("memcpy")) and
+      call.getTarget().hasName("strcpy")  and
       sink.asExpr() = call.getArgument(0)
     )
   }
@@ -41,4 +41,4 @@ from HeapBufferOverflow cfg, DataFlow::PathNode source, DataFlow::PathNode sink
 where cfg.hasFlowPath(source, sink)
 //select sink.getNode(), source, sink, "Potential heap-based buffer overflow detected."
 
-select source,"new or malloc",sink, "use of strcpy or memcpy"
+select source,"new or malloc",sink, "use of strcpy"
