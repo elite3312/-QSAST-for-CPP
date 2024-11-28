@@ -41,4 +41,4 @@ from HeapBufferOverflow cfg, DataFlow::PathNode source, DataFlow::PathNode sink
 where cfg.hasFlowPath(source, sink)
 //select sink.getNode(), source, sink, "Potential heap-based buffer overflow detected."
 
-select source,"new or malloc",sink, "use of strcpy"
+select source,"new or malloc",sink, "use of strcpy after malloc"

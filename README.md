@@ -17,11 +17,13 @@ Running codeQL against CWE.
   - If CodeQL fails to identify a known vulnerability, please write a new query for it.
 - to evaluate, we select five CWE cases from <https://github.com/arichardson/juliet-test-suite-c>
 
-## build commands
+## notes
 
 - building codeql db for cwe 196 and 122
   - codeql database create ~/cybersecurity2024/cwe_vulnerabilities --language=c-cpp --overwrite --command "python3 juliet.py 196 122 -g -m -r -k"
-
+- ~/git_repos/codeql/cpp/ql/src/Security/CWE contains some ready to go queries
+- eval
+  - count the occurences of "POTENTIAL" to count the number of expected positives
 ## tutorial
 
 ### installing codeQL
