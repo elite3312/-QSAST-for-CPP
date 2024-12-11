@@ -21,6 +21,26 @@ Running codeQL against CWE.
 
 - building codeql db for cwe 196 and 122
   - codeql database create ~/cybersecurity2024/cwe_vulnerabilities --language=c-cpp --overwrite --command "python3 juliet.py 196 122 -g -m -r -k"
+- building codeql db for 122 126 127 134 190 
+  - codeql database create ~/cybersecurity2024/cwe_vulnerabilities --language=c-cpp --overwrite --command "python3 juliet.py 122 134 190 126 127 -g -m -r -k"
+  ```txt
+  [2024-12-11 18:13:08] [build-stdout] ========== making /home/perry/git_repos/juliet-test-suite-c/testcases/CWE134_Uncontrolled_Format_String ==========
+  [2024-12-11 18:13:08] [build-stdout] ========== running /home/perry/git_repos/juliet-test-suite-c/testcases/CWE134_Uncontrolled_Format_String ==========
+  Finalizing database at /home/perry/cybersecurity2024/cwe_vulnerabilities.
+  Running pre-finalize script /home/perry/codeql/cpp/tools/pre-finalize.sh in /home/perry/git_repos/juliet-test-suite-c.
+  Running command in /home/perry/git_repos/juliet-test-suite-c: [/home/perry/codeql/cpp/tools/pre-finalize.sh]
+  Running TRAP import for CodeQL database at /home/perry/cybersecurity2024/cwe_vulnerabilities...
+  Grouping TRAP files by link target
+  Grouping unlinked TRAP files together
+  Scanning TRAP files
+  Importing TRAP files
+  Merging relations
+  Finished writing database (relations: 357.24 MiB; string pool: 38.03 MiB).
+  TRAP import complete (1m41s).
+  Finished zipping source archive (16.97 MiB).
+  Successfully created database at /home/perry/cybersecurity2024/cwe_vulnerabilities.
+  ```
+
 - ~/git_repos/codeql/cpp/ql/src/Security/CWE contains some ready to go queries
 - eval
   - count the occurences of "POTENTIAL" to count the number of expected positives
