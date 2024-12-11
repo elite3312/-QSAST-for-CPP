@@ -1,6 +1,6 @@
 import os
 import re
-
+import sys
 def count_potential_in_files(directory):
     total_count = 0
     # Walk through the directory
@@ -21,7 +21,7 @@ def count_potential_in_files(directory):
     return total_count
 
 # Specify the directory you want to search
-directory_path="/home/perry/git_repos/juliet-test-suite-c/testcases/CWE122_Heap_Based_Buffer_Overflow"
+directory_path=sys.argv[1]#"/home/perry/git_repos/juliet-test-suite-c/testcases/CWE122_Heap_Based_Buffer_Overflow"
 total_occurrences = 0
 
 for d in os.listdir(directory_path):
