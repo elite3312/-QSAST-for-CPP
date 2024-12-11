@@ -22,10 +22,36 @@ Running codeQL against CWE.
 - building codeql db for cwe 196 and 122
   - codeql database create ~/cybersecurity2024/cwe_vulnerabilities --language=c-cpp --overwrite --command "python3 juliet.py 196 122 -g -m -r -k"
 - building codeql db for 122 126 127 134 190 
-  - codeql database create ~/cybersecurity2024/cwe_vulnerabilities --language=c-cpp --overwrite --command "python3 juliet.py 122 134 190 126 127 -g -m -r -k"
+  - codeql database create ~/cybersecurity2024/cwe_vulnerabilities --language=c-cpp --overwrite --command "python3 juliet.py 122 126 127 134 190 -g -m -r -k"
   ```txt
-  [2024-12-11 18:13:08] [build-stdout] ========== making /home/perry/git_repos/juliet-test-suite-c/testcases/CWE134_Uncontrolled_Format_String ==========
-  [2024-12-11 18:13:08] [build-stdout] ========== running /home/perry/git_repos/juliet-test-suite-c/testcases/CWE134_Uncontrolled_Format_String ==========
+  [2024-12-11 18:56:25] [build-stdout] [100%] Linking C executable /home/perry/git_repos/juliet-test-suite-c/bin/CWE134/bad/CWE134_Uncontrolled_Format_String__char_listen_socket_vprintf_34-bad
+  [2024-12-11 18:56:25] [build-stdout] [100%] Linking C executable /home/perry/git_repos/juliet-test-suite-c/bin/CWE134/good/CWE134_Uncontrolled_Format_String__char_listen_socket_vprintf_34-good
+  [2024-12-11 18:56:25] [build-stdout] [100%] Built target CWE134_Uncontrolled_Format_String__char_listen_socket_vprintf_22-good
+  [2024-12-11 18:56:25] [build-stdout] [100%] Built target CWE134_Uncontrolled_Format_String__char_environment_snprintf_72-bad
+  [2024-12-11 18:56:25] [build-stdout] [100%] Built target CWE134_Uncontrolled_Format_String__char_listen_socket_vfprintf_67-bad
+  [2024-12-11 18:56:25] [build-stdout] [100%] Built target CWE134_Uncontrolled_Format_String__char_listen_socket_snprintf_84-bad
+  [2024-12-11 18:56:25] [build-stdout] [100%] Built target CWE134_Uncontrolled_Format_String__char_listen_socket_vprintf_32-good
+  [2024-12-11 18:56:25] [build-stdout] [100%] Built target CWE134_Uncontrolled_Format_String__char_listen_socket_vfprintf_04-bad
+  [2024-12-11 18:56:25] [build-stdout] [100%] Built target CWE134_Uncontrolled_Format_String__char_listen_socket_vprintf_32-bad
+  [2024-12-11 18:56:25] [build-stdout] [100%] Built target CWE134_Uncontrolled_Format_String__char_listen_socket_vprintf_42-good
+  [2024-12-11 18:56:25] [build-stdout] [100%] Built target CWE134_Uncontrolled_Format_String__char_listen_socket_vprintf_34-good
+  [2024-12-11 18:56:25] [build-stdout] [100%] Built target CWE134_Uncontrolled_Format_String__char_listen_socket_vprintf_34-bad
+  [2024-12-11 18:56:25] [build-stdout] preload path 0.01s does not exist - not running tests
+  [2024-12-11 18:56:25] [build-stdout] ========== generating /home/perry/git_repos/juliet-test-suite-c/testcases/CWE122_Heap_Based_Buffer_Overflow ==========
+  [2024-12-11 18:56:25] [build-stdout] ========== making /home/perry/git_repos/juliet-test-suite-c/testcases/CWE122_Heap_Based_Buffer_Overflow ==========
+  [2024-12-11 18:56:25] [build-stdout] ========== running /home/perry/git_repos/juliet-test-suite-c/testcases/CWE122_Heap_Based_Buffer_Overflow ==========
+  [2024-12-11 18:56:25] [build-stdout] ========== generating /home/perry/git_repos/juliet-test-suite-c/testcases/CWE190_Integer_Overflow ==========
+  [2024-12-11 18:56:25] [build-stdout] ========== making /home/perry/git_repos/juliet-test-suite-c/testcases/CWE190_Integer_Overflow ==========
+  [2024-12-11 18:56:25] [build-stdout] ========== running /home/perry/git_repos/juliet-test-suite-c/testcases/CWE190_Integer_Overflow ==========
+  [2024-12-11 18:56:25] [build-stdout] ========== generating /home/perry/git_repos/juliet-test-suite-c/testcases/CWE126_Buffer_Overread ==========
+  [2024-12-11 18:56:25] [build-stdout] ========== making /home/perry/git_repos/juliet-test-suite-c/testcases/CWE126_Buffer_Overread ==========
+  [2024-12-11 18:56:25] [build-stdout] ========== running /home/perry/git_repos/juliet-test-suite-c/testcases/CWE126_Buffer_Overread ==========
+  [2024-12-11 18:56:25] [build-stdout] ========== generating /home/perry/git_repos/juliet-test-suite-c/testcases/CWE127_Buffer_Underread ==========
+  [2024-12-11 18:56:25] [build-stdout] ========== making /home/perry/git_repos/juliet-test-suite-c/testcases/CWE127_Buffer_Underread ==========
+  [2024-12-11 18:56:25] [build-stdout] ========== running /home/perry/git_repos/juliet-test-suite-c/testcases/CWE127_Buffer_Underread ==========
+  [2024-12-11 18:56:25] [build-stdout] ========== generating /home/perry/git_repos/juliet-test-suite-c/testcases/CWE134_Uncontrolled_Format_String ==========
+  [2024-12-11 18:56:25] [build-stdout] ========== making /home/perry/git_repos/juliet-test-suite-c/testcases/CWE134_Uncontrolled_Format_String ==========
+  [2024-12-11 18:56:25] [build-stdout] ========== running /home/perry/git_repos/juliet-test-suite-c/testcases/CWE134_Uncontrolled_Format_String ==========
   Finalizing database at /home/perry/cybersecurity2024/cwe_vulnerabilities.
   Running pre-finalize script /home/perry/codeql/cpp/tools/pre-finalize.sh in /home/perry/git_repos/juliet-test-suite-c.
   Running command in /home/perry/git_repos/juliet-test-suite-c: [/home/perry/codeql/cpp/tools/pre-finalize.sh]
@@ -35,9 +61,9 @@ Running codeQL against CWE.
   Scanning TRAP files
   Importing TRAP files
   Merging relations
-  Finished writing database (relations: 357.24 MiB; string pool: 38.03 MiB).
-  TRAP import complete (1m41s).
-  Finished zipping source archive (16.97 MiB).
+  Finished writing database (relations: 531.39 MiB; string pool: 70.03 MiB).
+  TRAP import complete (3m14s).
+  Finished zipping source archive (25.58 MiB).
   Successfully created database at /home/perry/cybersecurity2024/cwe_vulnerabilities.
   ```
 
