@@ -22,6 +22,8 @@ def count_potential_in_files(directory):
 
 # Specify the directory you want to search
 directory_path=sys.argv[1]#"/home/perry/git_repos/juliet-test-suite-c/testcases/CWE122_Heap_Based_Buffer_Overflow"
+#/home/perry/git_repos/juliet-test-suite-c/testcases/CWE134_Uncontrolled_Format_String
+#/home/perry/git_repos/juliet-test-suite-c/testcases/CWE127_Buffer_Underread 
 total_occurrences = 0
 
 for d in os.listdir(directory_path):
